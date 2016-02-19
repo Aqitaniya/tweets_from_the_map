@@ -1,0 +1,42 @@
+#slider{
+    width: 190px;
+    height: 20px;
+    margin: 10px 0;
+}
+#slider span{
+    height: 25px;
+}
+.wrap{
+    float:left;
+}
+#map{
+    margin:10px;
+    width:1000px;
+    height:450px;
+}
+
+#shortcode_content{
+    margin:15px;
+    border:1px solid ;
+}
+    #tweet_img{
+        width:100%;
+        height: 30px;
+        text-align: center;
+        border-bottom:1px black solid;
+    }
+    #tweet_content{
+        padding:5px;
+        border-bottom:1px black solid;
+        white-space: normal
+        display:inline-block;
+    }
+        #tweet_autor{
+            width: 20%;
+            float:left;
+        }
+        #tweet_text{
+            width: 80%;
+            display:inline-block;
+
+        }

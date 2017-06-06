@@ -95,9 +95,7 @@ function tftm_radius_text(){
 //// ------------------------------------------------
 //// Validation settings
 //// ------------------------------------------------
-
 function tftm_validation_settings($tweets_maps_settings){
-
     $val = get_option('tweets_maps_settings');
     $message = $type = null;
 
@@ -189,6 +187,7 @@ function tftm_validation_settings($tweets_maps_settings){
     }
 
     if($message==null){
+
         $tweets_data=get_tweets($tweets_maps_settings);
         if($tweets_data!=null)
             tftm_settings_bd::tftm_insert($tweets_data);

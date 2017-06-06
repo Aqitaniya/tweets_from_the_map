@@ -3,7 +3,7 @@
 class tftm_settings_bd{
     static function tftm_install() {
         global $wpdb;
-
+        //wpdb::set_charset( $wpdb, 'utf8_general_ci' );
         $wpdb->query("CREATE TABLE `".$wpdb->prefix."tweets` (`ID` INT(10) UNSIGNED NULL AUTO_INCREMENT,
                                                               `tweet_theme` VARCHAR(145) DEFAULT 'none',
                                                               `tweet_id` VARCHAR(30) DEFAULT 'none',

@@ -38,8 +38,8 @@ function my_custom_submenu_page_callback() {
     <div class="wrap">
         <h2>Table of tweets</h2>
 
-        <a href='http://testsite.com/wpsite/wp-content/plugins/tweets_from_the_map/tftm_download.php?type_file=csv'>Download file in csv formst (TableOfTweets.csv)</a><br>
-        <a href='http://testsite.com/wpsite/wp-content/plugins/tweets_from_the_map/tftm_download.php?type_file=xml'>Download file in xml formst (TableOfTweets.xml)</a>
+        <a href='<?php echo plugin_dir_url(__FILE__); ?>tftm_download.php?type_file=csv'>Download file in csv formst (TableOfTweets.csv)</a><br>
+        <a href='<?php echo plugin_dir_url(__FILE__); ?>tftm_download.php?type_file=xml'>Download file in xml formst (TableOfTweets.xml)</a>
 
 
         <form  id="table_form" method="post">
@@ -58,17 +58,20 @@ function my_custom_submenu_page_callback() {
 require "twitteroauth/autoload.php";
 
 use Abraham\TwitterOAuth\TwitterOAuth;
-
+//echo 'hhhhhhhhh';
+//$tweets_data=get_tweets(get_option('tweets_maps_settings'));
+//var_dump($tweets_data);
 function get_tweets($maps_settings){
 
-
     define("CONSUMER_KEY", "e7zWUJ5zVnGY9ZQQEfEYKj3f0");
-    define("CONSUMER_SECRET", "IftcYgdQ23qFwh7YRlpQGUzdSrdzItXev7UtBP4WbeX0JCMmPCI");
+    define("CONSUMER_SECRET", "IftcYgdQ23qFwh7YRlpQGUzdSrdzItXev7UtBP4WbeX0JCMmPC");
     define("OAUTH_TOKEN", "4257362595-fi4x38wogRRHj62Fj0EKHqb5ZUH56xdhjj3bhA0");
     define("OAUTH_SECRET", "6ONZsPi7WzZMbd4PVSAguVMKmGLWA3BanF3zPfrxTPxQp");
 
     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, OAUTH_TOKEN, OAUTH_SECRET);
+
     $list_tweets = $connection->get("search/tweets",array('q' => $maps_settings['theme'], "geocode" => $maps_settings['latitude'].','.$maps_settings['longitude'].','.$maps_settings['radius'].'km',"count" => '200'));
+
     //Get tweeta in JSON format
     $array_tweets=$list_tweets->statuses;
 
@@ -105,5 +108,4 @@ function get_tweets($maps_settings){
     else
         return null;
     };
-
 ?>

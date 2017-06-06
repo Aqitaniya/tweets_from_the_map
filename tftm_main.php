@@ -13,9 +13,9 @@ Author: Stacey
 ///
 function tftm_add_wp_enqueue_styles_scripts()
 {
-    wp_enqueue_style('tftm_style_front', plugin_dir_url('') . '/tweets_from_the_map/css/tftm_style_front.css');
+    wp_enqueue_style('tftm_style_front', plugin_dir_url(__FILE__) . '/tweets_from_the_map/css/tftm_style_front.css');
 
-    wp_enqueue_script('tftm_front', plugin_dir_url('') . '/tweets_from_the_map/js/front/tftm_front.js', array('jquery', 'jquery-ui-draggable', 'backbone','underscore'));
+    wp_enqueue_script('tftm_front', plugin_dir_url(__FILE__) . '/tweets_from_the_map/js/front/tftm_front.js', array('jquery', 'jquery-ui-draggable', 'backbone','underscore'));
 
 }
 add_action('wp_enqueue_scripts', 'tftm_add_wp_enqueue_styles_scripts');
@@ -24,12 +24,12 @@ add_action('wp_enqueue_scripts', 'tftm_add_wp_enqueue_styles_scripts');
 function tftm_add_admin_enqueue_styles_scripts()
 {
 
-    wp_enqueue_style('tftm_style_admin', plugin_dir_url('') . 'tweets_from_the_map/css/tftm_style_admin.css');
+    wp_enqueue_style('tftm_style_admin', plugin_dir_url(__FILE__) . 'css/tftm_style_admin.css');
     wp_enqueue_style('stylesheet', '//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
 
-    wp_enqueue_script('tftm_map', plugin_dir_url('') . '/tweets_from_the_map/js/admin/tftm_map.js', array('jquery','jquery-ui-slider','jquery-ui-dialog'));
-    wp_enqueue_script('tftm_table', plugin_dir_url('') . '/tweets_from_the_map/js/admin/tftm_table.js', array('jquery','jquery-ui-slider','jquery-ui-dialog'));
-    wp_enqueue_script('tftm_cookie', plugin_dir_url('') . '/tweets_from_the_map/js/admin/jquery-cookie-master/src/jquery.cookie.js', array('jquery','jquery-ui-slider','jquery-ui-dialog'));
+    wp_enqueue_script('tftm_map', plugin_dir_url(__FILE__) . 'js/admin/tftm_map.js', array('jquery','jquery-ui-slider','jquery-ui-dialog'));
+    wp_enqueue_script('tftm_table', plugin_dir_url(__FILE__) . 'js/admin/tftm_table.js', array('jquery','jquery-ui-slider','jquery-ui-dialog'));
+    wp_enqueue_script('tftm_cookie', plugin_dir_url(__FILE__) . 'js/admin/jquery-cookie-master/src/jquery.cookie.js', array('jquery','jquery-ui-slider','jquery-ui-dialog'));
 
 }
 add_action('admin_enqueue_scripts', 'tftm_add_admin_enqueue_styles_scripts');

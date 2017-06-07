@@ -3,7 +3,8 @@
 class tftm_settings_bd{
     static function tftm_install() {
         global $wpdb;
-        //wpdb::set_charset( $wpdb, 'utf8_general_ci' );
+
+        //$wpdb::set_charset( $wpdb, 'utf8_general_ci' );
         $wpdb->query("CREATE TABLE `".$wpdb->prefix."tweets` (`ID` INT(10) UNSIGNED NULL AUTO_INCREMENT,
                                                               `tweet_theme` VARCHAR(145) DEFAULT 'none',
                                                               `tweet_id` VARCHAR(30) DEFAULT 'none',
@@ -13,6 +14,8 @@ class tftm_settings_bd{
                                                               `tweet_author_screen_name` VARCHAR (50) DEFAULT 'none',
                                                               `tweet_location` VARCHAR (20) DEFAULT 'none',
                                                                PRIMARY KEY (`ID`))");
+
+        $wpdb->query("ALTER TABLE `".$wpdb->prefix."tweets` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
     }
 
     static function tftm_uninstall() {

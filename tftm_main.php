@@ -82,7 +82,7 @@ function tftm_shortcode($attr, $title='')
 {
     $tweets_array=tftm_settings_bd::tftm_select_20();
 
-    echo '<div id="shortcode_content" style="background-color:'.$attr["background-color-header"].'; width:'.$attr["width"].'; border-color:'.$attr["border-color"].'">
+    echo '<div id="shortcode_content" style="background-color:'.$attr["background-color-header"].'; width:'.$attr["width"].'; max-width:'.$attr["max-width"].'; border-color:'.$attr["border-color"].'">
             <div id="tweet_img" class="dashicons dashicons-twitter">'.$title.'</div>';
             for($i=0; $i<count($tweets_array);$i++) {
                 echo '<div id="tweet_content" style="background-color:'.$attr["background-color-content"].'">';

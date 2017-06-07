@@ -58,9 +58,7 @@ function my_custom_submenu_page_callback() {
 require "twitteroauth/autoload.php";
 
 use Abraham\TwitterOAuth\TwitterOAuth;
-//echo 'hhhhhhhhh';
-//$tweets_data=get_tweets(get_option('tweets_maps_settings'));
-//var_dump($tweets_data);
+
 function get_tweets($maps_settings){
 
     define("CONSUMER_KEY", "e7zWUJ5zVnGY9ZQQEfEYKj3f0");
@@ -78,29 +76,32 @@ function get_tweets($maps_settings){
     if($array_tweets) {
         foreach ($array_tweets as $key => $status) {
             $tweets_data[$key] = array(
-                'theme' => $maps_settings['theme'],
+                'theme' => htmlspecialchars($maps_settings['theme'], ENT_QUOTES | ENT_SUBSTITUTE | ENT_IGNORE | ENT_DISALLOWED, 'UTF-8'),
                 'id' => $status->id,
-                'text' => wp_encode_emoji(htmlspecialchars($status->text, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')),
+                'text' => wp_encode_emoji(htmlspecialchars($status->text, ENT_QUOTES | ENT_SUBSTITUTE | ENT_IGNORE | ENT_DISALLOWED, 'UTF-8')),
                 'tweets_data' => mysql2date('Y-m-d H:i:s', $status->created_at),
-                'author_name' => $status->user->name,
-                'author_screen_name' => wp_encode_emoji(htmlspecialchars($status->user->screen_name, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')),
-                'location' => $status->user->location,
+                'author_name' => htmlspecialchars($status->user->name, ENT_QUOTES | ENT_SUBSTITUTE | ENT_IGNORE | ENT_DISALLOWED, 'UTF-8'),
+                'author_screen_name' =>  wp_encode_emoji(htmlspecialchars($status->user->screen_name, ENT_QUOTES | ENT_SUBSTITUTE | ENT_IGNORE | ENT_DISALLOWED, 'UTF-8')),
+                'location' => htmlspecialchars($status->user->location, ENT_QUOTES | ENT_SUBSTITUTE | ENT_IGNORE | ENT_DISALLOWED, 'UTF-8'),
             );
         };
 
         $tweet_id = tftm_settings_bd::tftm_select_id($maps_settings['theme']);
-
         if($tweet_id){
-            foreach($tweet_id as $key => $id){
-                foreach($tweets_data as $key2 => $new_tweet_id){
-                  if($id['tweet_id']==$new_tweet_id['id']){
-                      unset($tweets_data[$key2]);
-                      unset($tweet_id[$key]);
-                      break(1);
-                  }
-                }
+//            foreach($tweet_id as $key => $id){
+//                foreach($tweets_data as $key2 => $new_tweet_id){
+//                  if($id['tweet_id']==$new_tweet_id['id']){
+//                      unset($tweets_data[$key2]);
+//                      unset($tweet_id[$key]);
+//                      break(1);
+//                  }
+//                }
+//            }
+            $tweet_id = array_column($tweet_id,'tweet_id');
+            foreach($tweets_data as $key => $new_tweet_id){
+               if(in_array($new_tweet_id['id'], $tweet_id))
+                   unset($tweets_data[$key]);
             }
-
         }
 
     return $tweets_data;

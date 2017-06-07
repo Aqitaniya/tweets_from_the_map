@@ -24,7 +24,7 @@ function tftm_settings_page(){
     </div><div id="map"></div>
 
     <?php
-  echo do_shortcode('[tweets_shortcode background-color-header="#CCFFFF" background-color-content="white" width="600px" border-color="black"]Messages from Twitter[/tweets_shortcode]');
+  echo do_shortcode('[tweets_shortcode background-color-header="#CCFFFF" background-color-content="white" width="100%" max-width="1000px" border-color="black"]Messages from Twitter[/tweets_shortcode]');
 }
 
 
@@ -199,7 +199,7 @@ function tftm_validation_settings($tweets_maps_settings){
 function tftm_admin_notices_action() {
     settings_errors( 'tftm_setting_error');
 }
-add_action( 'admin_notices', 'tftm_admin_notices_action' );
+add_action( 'admin_notices', 'tftm_admin_notices_action');
 ?>
 
 <div id="dialog" title="Error dialog" style="display: none">

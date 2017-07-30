@@ -1,0 +1,26 @@
+#shortcode_content {
+    margin: 15px;
+    border: 1px solid;
+}
+#shortcode_content #tweet_img {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px black solid;
+}
+#shortcode_content .tweet_content {
+    padding: 5px;
+    border-bottom: 1px black solid;
+    white-space: normal;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+#shortcode_content .tweet_autor {
+    width: 20%;
+    float:left;
+}
+#shortcode_content .tweet_text {
+    width: 80%;
+    display: inline-block;
+}

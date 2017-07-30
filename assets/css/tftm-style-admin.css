@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/*--------settings map---------*/
+#slider {
+    width: 97%;
+    height: 20px;
+    margin: 10px 0;
+}
+#slider span {
+    height: 25px;
+}
+.wrap {
+    float: left;
+}
+#map {
+    margin: 10px;
+    width: 1000px;
+    height: 450px;
+}
+.ui-button {
+    outline: none;
+}
+
+/*--------shortcode---------*/
+#shortcode_content {
+    margin: 15px;
+    border: 1px solid;
+}
+#shortcode_content #tweet_img {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px black solid;
+}
+#shortcode_content .tweet_content {
+    padding: 5px;
+    border-bottom: 1px black solid;
+    white-space: normal;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+#shortcode_content .tweet_autor {
+    width: 20%;
+    float:left;
+}
+#shortcode_content .tweet_text {
+    width: 80%;
+    display: inline-block;
+}
+/*--------settings api---------*/
+.tabs-menu {
+    height: 30px;
+    float: left;
+    clear: both;
+    margin: 10px 0 0 0;
+}
+.tabs-menu li {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin: 0 10px 0 0;
+    background-color: #ccc;
+    border: 1px solid #000000;
+    border-bottom: 0;
+    box-sizing: border-box;
+}
+.tabs-menu li.current {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #ccffff;
+    z-index: 5;
+}
+.tabs-menu li a {
+    padding: 6px 10px 10px 10px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+.tabs-menu .current a {
+    color: #000000;
+    background: #ccffff;
+}
+.tab {
+    border: 1px solid #000000;
+    background-color: #fff;
+    clear: left;
+    margin-bottom: 20px;
+    width: auto;
+}
+.tab-content {
+    width: 660px;
+    padding: 20px;
+    display: none;
+    background: #ccffff;
+}
+#tab-1 {
+    display: block;
+}
+.api-settings input{
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 0px 1px rgb(193, 178, 178);
+    -moz-box-shadow: 0px 0px 0px 1px rgb(193, 178, 178);
+    box-shadow: 0px 0px 0px 1px rgb(193, 178, 178);
+}
+.api-settings input[type=submit]{
+    width: auto;
+}
+.api-settings .submit{
+    text-align: center;
+}

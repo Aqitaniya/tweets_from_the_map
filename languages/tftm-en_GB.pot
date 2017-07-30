@@ -1,0 +1,200 @@
+# Copyright (C) 2017 WordPress contributors.
+# This file is distributed under the same license as the Tweets from the map package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tweets from the map 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Aqitaniya/tweets_from_the_map.git\n"
+"POT-Creation-Date: 2017-07-09 17:32:37+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+
+#: includes/class_tftm_settings_map.php:20
+msgid "Tweets from the map"
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:69
+msgid "Main settings"
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:74
+#: includes/class-tftm-tweets-table.php:88
+msgid "Theme"
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:75
+msgid "Latitude"
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:76
+msgid "Longitude"
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:77
+msgid "Radius, km"
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:87
+msgid "Page of settings google map"
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:154
+msgid 'Field "Theme" can not be empty'
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:166
+msgid 'Field "Latitude" can not be empty'
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:174
+msgid 'Field "Latitude" must contain numbers'
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:182
+msgid 'Field "Latitude" should be in the range from -90 to 90 degrees'
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:191
+msgid 'Field "Longitude" can not be empty'
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:199
+msgid 'Field "Longitude" must contain numbers'
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:207
+msgid 'Field "Longitude" should be in the range from -180 to 180 degrees'
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:216
+msgid 'Field "Radius" can not be empty'
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:224
+msgid 'Field "Radius" must contain numbers'
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:232
+msgid 'Field "Radius" should be in the range from 0 to 40 075 km'
+msgstr ""
+
+#: includes/class-tftm-settings-map.php:216
+msgid 'Field "Radius" can not be empty'
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:23
+msgid "API Settings"
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:35
+msgid "Twitter"
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:36
+msgid "Google"
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:74
+msgid "Twitter api settings"
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:79
+msgid "Consumer Key"
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:80
+msgid "Consumer Secret"
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:81
+msgid "Oauth Token"
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:82
+msgid "Oauth Secret"
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:94
+msgid "Google api settings"
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:99
+msgid "API Key"
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:108
+msgid "Please enter the settings for the connection with Twitter api"
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:115
+msgid "Please enter the settings for the connection with Google api"
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:180
+msgid 'Field "Consumer Key" can not be empty'
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:191
+msgid 'Field "Consumer Secret" can not be empty'
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:202
+msgid 'Field "Oauth Token" can not be empty'
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:213
+msgid 'Field "Oauth Secret" can not be empty'
+msgstr ""
+
+#: includes/class-tftm-settings-api.php:224
+msgid "You entered incorrect api data"
+msgstr ""
+
+#: includes/class-tftm-list-tweets.php:25
+msgid "List tweets"
+msgstr ""
+
+#: includes/class-tftm-list-tweets.php:83
+msgid "Table of tweets"
+msgstr ""
+
+#: includes/class-tftm-list-tweets.php:85
+msgid "Download file in csv format"
+msgstr ""
+
+#: includes/class-tftm-list-tweets.php:86
+msgid "Download file in xml format"
+msgstr ""
+
+#: includes/class-tftm-list-tweets.php:91
+msgid "search"
+msgstr ""
+
+#: includes/class-tftm-tweets-table.php:89
+msgid "Tweet ID"
+msgstr ""
+
+#: includes/class-tftm-tweets-table.php:90
+msgid "Text"
+msgstr ""
+
+#: includes/class-tftm-tweets-table.php:91
+msgid "Date created"
+msgstr ""
+
+#: includes/class-tftm-tweets-table.php:92
+msgid "Author"
+msgstr ""
+
+#: includes/class-tftm-tweets-table.php:93
+msgid "Author screen name"
+msgstr ""
+
+#: includes/class-tftm-tweets-table.php:94
+msgid "Location"
+msgstr ""
+
